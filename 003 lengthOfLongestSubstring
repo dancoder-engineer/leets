@@ -1,0 +1,39 @@
+var lengthOfLongestSubstring = function(s) {
+
+    function uniq(str) {
+        let arr = str.split('')
+        return arr.filter((item, index) => arr.indexOf(item) === index)
+    }
+
+//make unique list of all different characters in String
+//test each string to make sure each character is unique
+//if it is. and the amt of characters is higher than max, put that amt in max
+
+
+    let longest = 1
+    let uniqChars = uniq(s)
+
+    if (s.length === 0) { return 0 }
+
+    for(let i of uniqChars) {
+        let tempArr = s.split(i)
+        for(let j of tempArr) {
+            j = i + j
+            if (j.length < longest || j.length !== uniq(j).length) { continue }
+             longest = j.length 
+
+            console.log(j, longest, uniq(j).length, j.length)
+        }
+    }
+
+
+console.log(longest)
+};
+
+
+
+
+let s
+s = "ohomm"
+lengthOfLongestSubstring(s)
+
