@@ -57,4 +57,4 @@ for (let i of ex) {
 
 
 //For each place except last one, slice from forst to last and check if that's a palindrome
-//need pointer to go to end/be more greedy
+//need pointer to go to end/be more greedy, go in reverse
